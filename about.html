@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <ul class="nav">
+        <li><a href="index.html">home</a></li>
+        <li><a href="#" class="active">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        
+    </ul>
+    <div id="about">
+        
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="aatmik2.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-titles">About Me</h1>
+                    <p>I'm passionate about programming and problem-solving, with experience in developing a Python voice assistant and basic robotics projects. Active in programmer communities and skilled in leadership, I'm eager to tackle new challenges and make impactful contributions to technology..</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            
+                            <li><span>python</span><br>Voice-Mate</li>
+                            <li><span>web Development</span><br>Back end web Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents " id="experience">
+                        <ul>
+                            <li><span>Technical Team Member</span><br>IEEE SB GCEK</li>
+                            
+                            <li><span>Volunteer</span><br>Volunteer during the on-campus placement conducted by Cred.ai at GCEK on April 4, 2024</li>
+                            <li><span>Student Mentor</span><br>ROBOCEK Actuactor 2023</li>
+                            <li><span>Treasurer</span><br>ROBOCEK</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents " id="education">
+                        <ul>
+                            <li><span>Computer Science & Engineering</span><br>Government College Of Engineering Kannur</li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+       
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
